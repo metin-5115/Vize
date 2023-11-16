@@ -5,3 +5,6 @@ maps <- read.csv(url, header = TRUE,sep = ";")
 
 maps$Latitude <- gsub("N", "", (maps$Latitude))
 maps$Latitude<-as.numeric(maps$Latitude)
+
+
+idx <- which(grepl("W", maps$Longitude))
