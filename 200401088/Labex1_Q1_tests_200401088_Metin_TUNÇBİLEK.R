@@ -9,3 +9,7 @@ test_that("Test : MapsThatChangedOurWorld_StoryMap_Data.csv adlı dosya aktif di
   expect_true(file.exists(file_name), 
               sprintf("Dosya aktif dizinde mevcut değil.", file_name))
 })
+
+test_that("Test : maps adlı değişken Global Workspace’de mevcuttur.", {
+  expect_true(exists("maps", envir = .GlobalEnv), info = "maps adlı değişken mevcut değil.")
+})
